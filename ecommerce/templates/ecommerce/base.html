@@ -10,19 +10,44 @@
     <link rel="shortcut icon" href="{% static 'images/mainlogo.png' %}"/>
 </head>
 <body>
-    <nav>
-
+    <nav class = "container mt-5">
+        <div class="d-flex justify-content-start">
+            <img src = "{% static 'images/mainlogo.png' %}"></img>
+            <div class="col" style = "margin-left: 25px">
+                <h1>
+                    Courtside
+                </h1>
+                <h1>
+                    PH
+                </h1>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <p class = "p-3" style = "background-color: #EBEBEB; border-radius: 8px; width: 233px; height: 45px;">
+                <img src = "{% static 'images/searchbaricon.png' %}"></img>
+                Search
+            </p>
+            <img src = "{% static 'images/shoppingcart.png' %}" style = "width: 35px; height: 35px; margin-left: 15px;"></img>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'home' %}" style = "margin-right: 50px">HOME</a>
+            <a href="{% url 'catalog' %}" style = "margin-right: 50px">CATALOG</a>
+            <a href="{% url 'cardgrading' %}" style = "margin-right: 50px">CARD GRADING</a>
+            <a href="{% url 'marketplace' %}" style = "margin-right: 50px">MARKETPLACE</a>
+            <a href="{% url 'contactus' %}">CONTACT US</a>
+        </div>
     </nav>
-    {% block content %}
+    <div class = "mt-3" style = "background-color: #B9E6FF; min-height: 100vh;">
+        <div class = "container">
+            {% block content %}
     
-    {% endblock  %}
+            {% endblock  %}
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <footer>
-
-    </footer>
 </body>
 </html>
